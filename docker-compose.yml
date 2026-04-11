@@ -1,0 +1,23 @@
+services:
+  web:
+    build: ./$APP_NAME
+    container_name: $APP_NAME
+    restart: unless-stopped
+    volumes:
+      - ./$APP_NAME:/app
+    ports:
+      - $PORT:$PORT
+    environment:
+      PYTHONUNBUFFERED: 1
+    env_file:
+      - .env
+    entrypoint:
+      - /bin/sh
+      - entrypoint.dev.sh
+    develop:
+      watch:
+        - action: sync
+          path: ./$APP_NAME
+          target: /app
+          ignore:
+            - Dockerfile
