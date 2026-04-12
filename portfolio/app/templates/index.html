@@ -4,20 +4,6 @@
 {% block content %}
 
 <body>
-<header>
-  <nav>
-    <ul>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#skills">Skills</a></li>
-      <li><a href="#about">About</a></li>
-      <li id="contact-me"><a href="#contact">Contact Me</a></li>
-    </ul>
-  </nav>
-  <div id="header-info">
-    <h1>Hi there, I'm Brian Hornbrook</h1>
-    <h2>I'm a DevOps and Full Stack Engineer dedicated to delivering high-quality, optimized code.</h2>
-  </div>
-</header>
 
 <main>
   <div id="projects">
@@ -48,20 +34,21 @@
 
         <div class="area">
           <div class="image-area">
-            <a href="https://marianascleaningservicellc.com" target="_blank">
-              <img src="{% static 'images/marianas-logo.png' %}" alt="project image">
+            <a href="https://www.abwolp.com" target="_blank">
+              <img src="{% static 'images/better_way_logo.png' %}" alt="project image"
+                   style="background-color: #453e4f; border-radius: 75px;">
             </a>
           </div>
-          <h4>Marianas Cleaning Service LLS</h4>
+          <h4>A Better Way of Life Productions</h4>
           <div class="project-description-area">
-            <p>Listing all cleaning services.</p>
+            <p>A Christian Business that endeavors to operate in the following manner.</p>
           </div>
           <div class="tools">
-            <p><strong>Skills:</strong> Databases, Accounts, Contact Form</p>
-            <p><strong>Tools:</strong> Django, Superuser, Authentication, Responsive Site</p>
+            <p><strong>Skills:</strong> Glass Bubble Design, AI Automation</p>
+            <p><strong>Tools:</strong> Django</p>
           </div>
           <div class="live-page-button">
-            <a href="https://marianascleaningservicellc.com" target="_blank">
+            <a href="https://www.abwolp.com" target="_blank">
               <button>Live Page</button>
             </a>
             <div>
@@ -92,91 +79,172 @@
           </div>
         </div>
 
+        <div class="area">
+          <div class="image-area">
+            <a href="https://marianascleaningservicellc.com" target="_blank">
+              <img src="{% static 'images/marianas-logo.png' %}" alt="project image">
+            </a>
+          </div>
+          <h4>Marianas Cleaning Service LLS</h4>
+          <div class="project-description-area">
+            <p>Listing all cleaning services.</p>
+          </div>
+          <div class="tools">
+            <p><strong>Skills:</strong> Databases, Accounts, Contact Form</p>
+            <p><strong>Tools:</strong> Django, Superuser, Authentication, Responsive Site</p>
+          </div>
+          <div class="live-page-button">
+            <a href="https://marianascleaningservicellc.com" target="_blank">
+              <button>Live Page</button>
+            </a>
+            <div>
+            </div>
+          </div>
+        </div>
+
       </div>
 
       <div id="skills">
         <h2>Skills</h2>
 
         <div class="skill-section">
-          <h3>Developer Skills</h3>
-          <div id="my-skills">
+          <h3>Security</h3>
+          <div id="my-skills" class="skills-container">
             <div class="item">
-              <p>CI / CD</p>
+              <p>Linux Hardening</p>
             </div>
             <div class="item">
-              <p>Automation</p>
+              <p>Firewall Configuration</p>
             </div>
             <div class="item">
-              <p>Containerization</p>
+              <p>SSL/TLS (Let's Encrypt)</p>
             </div>
             <div class="item">
-              <p>Version Control</p>
+              <p>DNS security</p>
             </div>
             <div class="item">
-              <p>APIs</p>
+              <p>OWASP Top 10</p>
             </div>
             <div class="item">
-              <p>Responsive Typography</p>
-            </div>
-          </div>
-        </div>
-        <div class="skill-section">
-          <h3>Tools</h3>
-          <div id="my-tools">
-            <div class="item">
-              <p>Linux</p>
+              <p>secure credential management</p>
             </div>
             <div class="item">
-              <p>Debian</p>
+              <p>log analysis & anomaly detection</p>
             </div>
             <div class="item">
-              <p>GitHub</p>
-            </div>
-            <div class="item">
-              <p>AWS</p>
+              <p>Incident Response</p>
             </div>
           </div>
         </div>
         <div class="skill-section">
-          <h3>Frameworks</h3>
-          <div id="my-frameworks">
+          <h3>DevOps / Infra</h3>
+          <div id="my-tools" class="skills-container">
             <div class="item">
-              <p>Chef</p>
+              <p>Docker / Docker Compose</p>
             </div>
             <div class="item">
-              <p>Symfony</p>
+              <p>Traefik reverse proxy</p>
             </div>
             <div class="item">
-              <p>Laravel</p>
+              <p> VPS administration (Debian)</p>
             </div>
+            <div class="item">
+              <p>multi-site hosting</p>
+            </div>
+            <div class="item">
+              <p>CI/CD Pipelines</p>
+            </div>
+            <div class="item">
+              <p>SSH key management</p>
+            </div>
+          </div>
+        </div>
+        <div class="skill-section">
+          <h3>Web Dev</h3>
+          <div id="my-frameworks" class="skills-container">
             <div class="item">
               <p>Django</p>
-            </div>
-            <div class="item">
-              <p>React</p>
-            </div>
-            <div class="item">
-              <p>Vue</p>
-            </div>
-          </div>
-        </div>
-        <div class="skill-section">
-          <h3>Languages</h3>
-          <div id="my-languages">
-            <div class="item">
-              <p>Bash</p>
             </div>
             <div class="item">
               <p>Python</p>
             </div>
             <div class="item">
-              <p>Ruby</p>
+              <p>PostgresSQL</p>
             </div>
             <div class="item">
-              <p>PHP</p>
+              <p>REST APIs</p>
             </div>
             <div class="item">
-              <p>JavaScript</p>
+              <p>HTML / CSS / JS</p>
+            </div>
+            <div class="item">
+              <p>Cloudflare</p>
+            </div>
+            <div class="item">
+              <p>stom domain configuration</p>
+            </div>
+            <div class="item">
+              <p>Proton Mail (privacy-first email)</p>
+            </div>
+          </div>
+        </div>
+        <div class="skill-section">
+          <h3>Networking</h3>
+          <div id="networking" class="skills-container">
+            <div class="item">
+              <p>DNS (A, CNAME, MX, TXT records)</p>
+            </div>
+            <div class="item">
+              <p>HTTP / HTTPS</p>
+            </div>
+            <div class="item">
+              <p>reverse proxy architecture</p>
+            </div>
+            <div class="item">
+              <p>domain routing</p>
+            </div>
+            <div class="item">
+              <p>CDN configuration</p>
+            </div>
+          </div>
+        </div>
+        <div class="skill-section">
+          <h3>AI / Automation</h3>
+          <div id="ai-automation" class="skills-container">
+            <div class="item">
+              <p>Anthropic Claude API integration</p>
+            </div>
+            <div class="item">
+              <p>rompt engineering</p>
+            </div>
+            <div class="item">
+              <p>AI-powered widget development</p>
+            </div>
+            <div class="item">
+              <p>Python scripting & automation</p>
+            </div>
+          </div>
+        </div>
+        <div class="skill-section">
+          <h3>Other</h3>
+          <div id="tools-platforms" class="skills-container">
+            <div class="item">
+              <p>Git / GitHub</p>
+            </div>
+            <div class="item">
+              <p>VS Code / Jetbrains</p>
+            </div>
+            <div class="item">
+              <p>Cloudflare dashboard</p>
+            </div>
+            <div class="item">
+              <p>Linux CLI</p>
+            </div>
+            <div class="item">
+              <p>Linux CLI</p>
+            </div>
+            <div class="item">
+              <p>configuration management</p>
             </div>
           </div>
         </div>
@@ -186,14 +254,14 @@
         <div id="image-area">
           <img src="{% static 'images/resume_pic.jpg' %}" alt="resume">
         </div>
-        <h2>I'm Brian Hornbrook, a passionate programmer dedicated to leveraging coding to create impactful solutions.</h2>
-        <h3>One day I tried out programming and built a simple pong game using a web
+        <h2>I'm Brian Hornbrook, a passionate programmer dedicated to leveraging Infrustructure as Code and AI to create impactful solutions.</h2>
+        <h3>Years ago I tried out programming and built a simple pong game using a web
           program that was very similar to Python. I immediately fell in love with
           building using logic.</h3>
         <p>
           When I go on vacation, I like to approach it like writing a well-structured program. I plan out our route and
-          accommodations ahead of time, optimizing for the best value rather than just accepting the default. It's like
-          searching for the most efficient algorithm instead of running the first one that compiles.
+          accommodations ahead of time, optimizing for the best quality rather than just accepting what's placed in front
+          of me. Optimizing algorithms instead of running the first one created.
         </p>
         <p id="message">
           <strong>Can't wait to see what we build together!</strong>

@@ -115,16 +115,15 @@ h2 {
     width: 100%;
 }
 
-#my-skills,
-#my-tools,
-#my-frameworks,
-#my-languages {
-    margin: 0 0 40px 0;
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
+.skill-section {
+    .skills-container {
+        margin: 0 0 40px 0;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
 }
 
 #skills h3 {
