@@ -34,30 +34,16 @@ services:
       - "traefik.http.routers.portfolio.middlewares=redirect"
 
       # https
-      - "traefik.http.routers.portfolio-secure.rule=Host(`portfolioelectric.com`) || Host(`www.portfolioelectric.com`)"
+      - "traefik.http.routers.portfolio-secure.rule=Host(`brianhornbrook.com`) || Host(`www.brianhornbrook.com`)"
       - "traefik.http.routers.portfolio-secure.entrypoints=websecure"
       - "traefik.http.routers.portfolio-secure.tls.certresolver=myresolver"
 
       # Services
-      - "traefik.http.services.portfolio-secure.loadbalancer.server.port=8000"
+      - "traefik.http.services.portfolio-secure.loadbalancer.server.port=8002"
 
       # Redirect Scheme HTTP -> HTTPS
       - "traefik.http.middlewares.redirect.redirectscheme.scheme=https"
       - "traefik.http.middlewares.redirect.redirectscheme.permanent=true"
-
-  db:
-    image: postgres:17
-    container_name: $APP_NAME-db
-    volumes:
-      - db-vol:/var/lib/postgresql/data:rw
-      - ./db:/docker-entrypoint-initdb.d:ro
-    environment:
-      POSTGRES_DB: ${POSTGRES_DB}
-      POSTGRES_USER: ${POSTGRES_USER}
-      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
-
-volumes:
-  db-vol:
 
 networks:
   traefik_proxy:
