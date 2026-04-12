@@ -1,20 +1,7 @@
+{% extends 'partials/base.html' %}
 {% load static %}
 
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Brian Hornbrook Portfolio</title>
-  <link rel="stylesheet" href="{% static 'css/style.css' %}">
-
-  <!-- font -->
-  <link href="https://fonts.googleapis.com/css2?family=Lekton&display=swap" rel="stylesheet">
-
-  <!-- semantic ui -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
-</head>
+{% block content %}
 
 <body>
 <header>
@@ -216,34 +203,5 @@
       </div>
     </div>
   </div>
-  <footer id="contact">
-    <h2>Let's Connect</h2>
-    <div id="footer-info-area">
-      <div class="footer-info">
-        <h3>Contact Info</h3>
-        <a id="call" href="tel:8172534571"><p>817-253-4571</p></a>
-        <p id="phone">(817) 253-4571</p>
-        <a href="mailto:contact@yourqualityprogrammer.com">
-          <p>contact@yourqualityprogrammer.com</p>
-        </a>
-      </div>
-      <div class="footer-info">
-        <h3>Follow Me</h3>
-        <div id="follow-me">
-          <a href="https://www.linkedin.com/in/brian-hornbrook" target="_BLANK">
-            <i id="linkedIn" class="linkedin icon"></i>
-          </a>
-          <a href="https://www.facebook.com/brianbdh" target="_blank">
-            <i class="facebook icon"></i>
-          </a>
-          <a href="https://github.com/brian-hornbrook" target="_blank">
-            <i class="github icon"></i>
-          </a>
-        </div>
-      </div>
-    </div>
-  </footer>
-</main>
-</body>
 
-</html>
+{% endblock content %}
