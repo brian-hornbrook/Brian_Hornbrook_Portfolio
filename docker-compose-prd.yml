@@ -20,8 +20,6 @@ services:
     entrypoint:
       - /bin/sh
       - entrypoint.prd.sh
-    depends_on:
-      - db
     networks:
       - traefik_proxy
     labels:
