@@ -1,0 +1,324 @@
+<!doctype html>
+<html lang="en" class="h-full" style="scroll-behavior:smooth;">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DevOps Portfolio</title>
+  <script src="https://cdn.tailwindcss.com/3.4.17"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lucide@0.263.0/dist/umd/lucide.min.js"></script>
+  <script src="/_sdk/element_sdk.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&amp;family=Outfit:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet">
+  <style>
+    html,body{margin:0;padding:0;height:100%}
+    *{box-sizing:border-box}
+    .terminal-cursor{animation:blink 1s step-end infinite}
+    @keyframes blink{50%{opacity:0}}
+    @keyframes fadeUp{from{opacity:0;transform:translateY(30px)}to{opacity:1;transform:translateY(0)}}
+    @keyframes slideIn{from{opacity:0;transform:translateX(-20px)}to{opacity:1;transform:translateX(0)}}
+    @keyframes pulseGlow{0%,100%{box-shadow:0 0 8px rgba(0,255,136,0.3)}50%{box-shadow:0 0 20px rgba(0,255,136,0.6)}}
+    .fade-up{animation:fadeUp .7s ease both}
+    .fade-up-1{animation-delay:.1s}
+    .fade-up-2{animation-delay:.2s}
+    .fade-up-3{animation-delay:.3s}
+    .fade-up-4{animation-delay:.4s}
+    .fade-up-5{animation-delay:.5s}
+    .slide-in{animation:slideIn .5s ease both}
+    .glow-dot{animation:pulseGlow 2s ease infinite}
+    .skill-bar{transition:width 1.2s cubic-bezier(.25,.46,.45,.94)}
+    .project-card:hover{transform:translateY(-4px);box-shadow:0 12px 40px rgba(0,0,0,.4)}
+    .project-card{transition:transform .3s ease,box-shadow .3s ease}
+    .nav-link{position:relative}
+    .nav-link::after{content:'';position:absolute;bottom:-2px;left:0;width:0;height:2px;transition:width .3s ease}
+    .nav-link:hover::after{width:100%}
+    .grid-bg{background-image:radial-gradient(circle at 1px 1px,rgba(255,255,255,.03) 1px,transparent 0);background-size:40px 40px}
+  </style>
+  <style>body { box-sizing: border-box; }</style>
+  <script src="/_sdk/data_sdk.js" type="text/javascript"></script>
+</head>
+<body class="h-full overflow-auto" style="background:linear-gradient(135deg, #0a0e17 0%, #0f1419 50%, #0a0e17 100%);">
+<div id="app" class="w-full h-full grid-bg" style="color:#c8d1e0;font-family:'Outfit',sans-serif;"><!-- Nav -->
+  <nav class="fixed top-0 left-0 w-full z-50 backdrop-blur-md" style="background:rgba(10,14,23,.85);border-bottom:1px solid rgba(0,255,136,.1);">
+    <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
+      <div class="flex items-center gap-2">
+        <div class="w-3 h-3 rounded-full glow-dot" style="background:#00ff88;"></div><span class="font-bold text-lg" style="font-family:'JetBrains Mono',monospace;color:#00ff88;">~/portfolio</span>
+      </div>
+      <div class="hidden sm:flex gap-6 text-sm"><a href="#intro" class="nav-link hover:text-white" style="--ul-color:#00ff88;">Intro</a> <a href="#projects" class="nav-link hover:text-white">Projects</a> <a href="#skills" class="nav-link hover:text-white">Skills</a> <a href="#about" class="nav-link hover:text-white">About</a>
+      </div>
+    </div>
+  </nav><!-- Hero -->
+  <section id="intro" class="min-h-screen flex items-center px-6 pt-20" style="min-height:100%;">
+    <div class="max-w-6xl mx-auto w-full grid lg:grid-cols-2 gap-12 items-center py-20">
+      <div>
+        <div class="fade-up fade-up-1 flex items-center gap-2 mb-4" style="font-family:'JetBrains Mono',monospace;font-size:14px;color:#00ff88;"><span>$</span> <span>whoami</span> <span class="terminal-cursor">▌</span>
+        </div>
+        <h1 id="el-hero-name" class="fade-up fade-up-2 text-4xl sm:text-5xl lg:text-6xl font-bold mb-4" style="color:#ffffff;">Alex Chen</h1>
+        <p id="el-hero-tagline" class="fade-up fade-up-3 text-xl sm:text-2xl font-light mb-6" style="color:#00ff88;">DevOps Engineer &amp; Cloud Architect</p>
+        <p id="el-hero-desc" class="fade-up fade-up-4 text-base leading-relaxed max-w-lg mb-8" style="color:#8892a4;">Building resilient, scalable infrastructure that empowers teams to ship faster. Passionate about automation, observability, and the art of zero-downtime deployments.</p>
+        <div class="fade-up fade-up-5 flex gap-4 flex-wrap"><a href="#projects" class="inline-flex items-center gap-2 px-6 py-3 rounded-lg font-medium text-sm transition-all hover:brightness-110" style="background:#00ff88;color:#0a0e17;"> <i data-lucide="folder-open" style="width:16px;height:16px;"></i> View Projects </a> <a href="#about" class="inline-flex items-center gap-2 px-6 py-3 rounded-lg font-medium text-sm transition-all hover:brightness-125" style="border:1px solid #1e293b;color:#c8d1e0;background:rgba(30,41,59,.4);"> <i data-lucide="user" style="width:16px;height:16px;"></i> About Me </a>
+        </div>
+      </div>
+      <div class="fade-up fade-up-4 hidden lg:block">
+        <div class="rounded-xl p-5" style="background:#111827;border:1px solid #1e293b;font-family:'JetBrains Mono',monospace;font-size:13px;">
+          <div class="flex gap-2 mb-4">
+            <div class="w-3 h-3 rounded-full" style="background:#ff5f57;"></div>
+            <div class="w-3 h-3 rounded-full" style="background:#ffbd2e;"></div>
+            <div class="w-3 h-3 rounded-full" style="background:#28c940;"></div>
+          </div>
+          <div style="color:#8892a4;">
+            <span style="color:#00ff88;">➜</span> <span style="color:#60a5fa;">~/infra</span> kubectl get pods
+          </div>
+          <div class="mt-2" style="color:#c8d1e0;">
+            NAME &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;READY &nbsp;STATUS
+          </div>
+          <div style="color:#34d399;">
+            api-server-7d4f &nbsp;&nbsp;1/1 &nbsp;&nbsp;&nbsp;Running
+          </div>
+          <div style="color:#34d399;">
+            worker-node-a3b &nbsp;&nbsp;1/1 &nbsp;&nbsp;&nbsp;Running
+          </div>
+          <div style="color:#34d399;">
+            redis-cache-9x2 &nbsp;&nbsp;1/1 &nbsp;&nbsp;&nbsp;Running
+          </div>
+          <div class="mt-3" style="color:#8892a4;">
+            <span style="color:#00ff88;">➜</span> <span style="color:#60a5fa;">~/infra</span> terraform plan
+          </div>
+          <div class="mt-1" style="color:#fbbf24;">
+            Plan: 3 to add, 0 to change, 0 to destroy.
+          </div>
+          <div class="mt-1" style="color:#34d399;">
+            ✓ All checks passed
+          </div>
+        </div>
+      </div>
+    </div>
+  </section><!-- Projects -->
+  <section id="projects" class="px-6 py-24">
+    <div class="max-w-6xl mx-auto">
+      <div class="flex items-center gap-3 mb-2"><i data-lucide="git-branch" style="width:20px;height:20px;color:#00ff88;"></i> <span style="font-family:'JetBrains Mono',monospace;font-size:13px;color:#00ff88;">// projects</span>
+      </div>
+      <h2 class="text-3xl sm:text-4xl font-bold mb-12" style="color:#fff;">Featured Projects</h2>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="project-card rounded-xl p-6" style="background:#111827;border:1px solid #1e293b;">
+          <div class="flex items-center gap-3 mb-4">
+            <div class="w-10 h-10 rounded-lg flex items-center justify-center" style="background:rgba(0,255,136,.1);">
+              <i data-lucide="cloud" style="width:20px;height:20px;color:#00ff88;"></i>
+            </div>
+            <h3 class="font-semibold text-lg" style="color:#fff;">Cloud Migration</h3>
+          </div>
+          <p class="text-sm mb-4" style="color:#8892a4;">Migrated 200+ microservices from on-prem to AWS EKS with zero downtime using blue-green deployment strategy.</p>
+          <div class="flex flex-wrap gap-2"><span class="px-2 py-1 rounded text-xs" style="background:rgba(96,165,250,.1);color:#60a5fa;">AWS</span> <span class="px-2 py-1 rounded text-xs" style="background:rgba(96,165,250,.1);color:#60a5fa;">Kubernetes</span> <span class="px-2 py-1 rounded text-xs" style="background:rgba(96,165,250,.1);color:#60a5fa;">Terraform</span>
+          </div>
+        </div>
+        <div class="project-card rounded-xl p-6" style="background:#111827;border:1px solid #1e293b;">
+          <div class="flex items-center gap-3 mb-4">
+            <div class="w-10 h-10 rounded-lg flex items-center justify-center" style="background:rgba(251,191,36,.1);">
+              <i data-lucide="activity" style="width:20px;height:20px;color:#fbbf24;"></i>
+            </div>
+            <h3 class="font-semibold text-lg" style="color:#fff;">Observability Stack</h3>
+          </div>
+          <p class="text-sm mb-4" style="color:#8892a4;">Built centralized logging and monitoring with Prometheus, Grafana, and custom alerting reducing MTTR by 60%.</p>
+          <div class="flex flex-wrap gap-2"><span class="px-2 py-1 rounded text-xs" style="background:rgba(251,191,36,.1);color:#fbbf24;">Prometheus</span> <span class="px-2 py-1 rounded text-xs" style="background:rgba(251,191,36,.1);color:#fbbf24;">Grafana</span> <span class="px-2 py-1 rounded text-xs" style="background:rgba(251,191,36,.1);color:#fbbf24;">Loki</span>
+          </div>
+        </div>
+        <div class="project-card rounded-xl p-6" style="background:#111827;border:1px solid #1e293b;">
+          <div class="flex items-center gap-3 mb-4">
+            <div class="w-10 h-10 rounded-lg flex items-center justify-center" style="background:rgba(167,139,250,.1);">
+              <i data-lucide="git-merge" style="width:20px;height:20px;color:#a78bfa;"></i>
+            </div>
+            <h3 class="font-semibold text-lg" style="color:#fff;">CI/CD Pipeline</h3>
+          </div>
+          <p class="text-sm mb-4" style="color:#8892a4;">Designed GitOps-driven pipeline with ArgoCD achieving 50+ deployments per day with automated rollbacks.</p>
+          <div class="flex flex-wrap gap-2"><span class="px-2 py-1 rounded text-xs" style="background:rgba(167,139,250,.1);color:#a78bfa;">ArgoCD</span> <span class="px-2 py-1 rounded text-xs" style="background:rgba(167,139,250,.1);color:#a78bfa;">GitHub Actions</span> <span class="px-2 py-1 rounded text-xs" style="background:rgba(167,139,250,.1);color:#a78bfa;">Helm</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section><!-- Skills -->
+  <section id="skills" class="px-6 py-24">
+    <div class="max-w-6xl mx-auto">
+      <div class="flex items-center gap-3 mb-2"><i data-lucide="terminal" style="width:20px;height:20px;color:#00ff88;"></i> <span style="font-family:'JetBrains Mono',monospace;font-size:13px;color:#00ff88;">// skills</span>
+      </div>
+      <h2 class="text-3xl sm:text-4xl font-bold mb-12" style="color:#fff;">Tech Stack</h2>
+      <div class="grid sm:grid-cols-2 gap-x-12 gap-y-6" id="skills-container">
+      </div>
+    </div>
+  </section><!-- About -->
+  <section id="about" class="px-6 py-24">
+    <div class="max-w-6xl mx-auto">
+      <div class="flex items-center gap-3 mb-2"><i data-lucide="user" style="width:20px;height:20px;color:#00ff88;"></i> <span style="font-family:'JetBrains Mono',monospace;font-size:13px;color:#00ff88;">// about</span>
+      </div>
+      <h2 class="text-3xl sm:text-4xl font-bold mb-8" style="color:#fff;">About Me</h2>
+      <div class="grid lg:grid-cols-3 gap-8">
+        <div class="lg:col-span-2">
+          <p id="el-about-text" class="text-base leading-relaxed mb-6" style="color:#8892a4;">With over 7 years in DevOps and SRE, I specialize in designing cloud-native infrastructure that scales. From startups to enterprise, I've helped teams adopt CI/CD, containerization, and Infrastructure as Code to move from quarterly releases to continuous delivery. I believe great infrastructure is invisible — it just works.</p>
+        </div>
+        <div class="flex flex-col gap-4">
+          <div class="rounded-xl p-5 text-center" style="background:#111827;border:1px solid #1e293b;">
+            <div id="el-about-exp" class="text-3xl font-bold" style="color:#00ff88;">
+              7+
+            </div>
+            <div class="text-sm mt-1" style="color:#8892a4;">
+              Years Experience
+            </div>
+          </div>
+          <div class="rounded-xl p-5 text-center" style="background:#111827;border:1px solid #1e293b;">
+            <div id="el-about-deploys" class="text-3xl font-bold" style="color:#60a5fa;">
+              500+
+            </div>
+            <div class="text-sm mt-1" style="color:#8892a4;">
+              Deployments
+            </div>
+          </div>
+          <div class="rounded-xl p-5 text-center" style="background:#111827;border:1px solid #1e293b;">
+            <div id="el-about-uptime" class="text-3xl font-bold" style="color:#fbbf24;">
+              99.99%
+            </div>
+            <div class="text-sm mt-1" style="color:#8892a4;">
+              Uptime SLA
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section><!-- Footer -->
+  <footer class="px-6 py-8" style="border-top:1px solid #1e293b;">
+    <div class="max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4 text-sm" style="color:#8892a4;"><span style="font-family:'JetBrains Mono',monospace;">© 2024 — Built with ☕ and YAML</span>
+      <div class="flex gap-4"><a href="#" class="hover:text-white transition-colors"><i data-lucide="github" style="width:18px;height:18px;"></i></a> <a href="#" class="hover:text-white transition-colors"><i data-lucide="linkedin" style="width:18px;height:18px;"></i></a> <a href="#" class="hover:text-white transition-colors"><i data-lucide="twitter" style="width:18px;height:18px;"></i></a>
+      </div>
+    </div>
+  </footer>
+</div>
+<script>
+  const skills = [
+    { name: 'Kubernetes / Docker', level: 95, color: '#00ff88' },
+    { name: 'Terraform / Pulumi', level: 90, color: '#60a5fa' },
+    { name: 'AWS / GCP', level: 92, color: '#fbbf24' },
+    { name: 'CI/CD (GitHub Actions, Jenkins)', level: 88, color: '#a78bfa' },
+    { name: 'Python / Bash / Go', level: 85, color: '#f472b6' },
+    { name: 'Monitoring (Prometheus, Grafana)', level: 90, color: '#34d399' },
+    { name: 'Linux / Networking', level: 93, color: '#fb923c' },
+    { name: 'GitOps / ArgoCD', level: 87, color: '#38bdf8' },
+  ];
+
+  const sc = document.getElementById('skills-container');
+  skills.forEach(s => {
+    const d = document.createElement('div');
+    d.innerHTML = `
+    <div class="flex justify-between mb-2">
+      <span class="text-sm font-medium" style="color:#fff;">${s.name}</span>
+      <span class="text-xs" style="font-family:'JetBrains Mono',monospace;color:${s.color};">${s.level}%</span>
+    </div>
+    <div class="w-full h-2 rounded-full" style="background:#1e293b;">
+      <div class="skill-bar h-2 rounded-full" style="width:0%;background:${s.color};" data-width="${s.level}"></div>
+    </div>`;
+    sc.appendChild(d);
+  });
+
+  // Animate skill bars on scroll
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.querySelectorAll('.skill-bar').forEach(bar => {
+          bar.style.width = bar.dataset.width + '%';
+        });
+      }
+    });
+  }, { threshold: 0.2 });
+  observer.observe(sc);
+
+  // Nav link highlight
+  document.querySelectorAll('.nav-link').forEach(link => {
+    link.style.setProperty('--ul-color', '#00ff88');
+    link.querySelector(':after') || null;
+  });
+  const style = document.createElement('style');
+  style.textContent = '.nav-link::after{background:#00ff88 !important;}';
+  document.head.appendChild(style);
+
+  // Element SDK
+  const defaultConfig = {
+    hero_name: 'Alex Chen',
+    hero_tagline: 'DevOps Engineer & Cloud Architect',
+    hero_description: 'Building resilient, scalable infrastructure that empowers teams to ship faster. Passionate about automation, observability, and the art of zero-downtime deployments.',
+    about_text: 'With over 7 years in DevOps and SRE, I specialize in designing cloud-native infrastructure that scales. From startups to enterprise, I\'ve helped teams adopt CI/CD, containerization, and Infrastructure as Code to move from quarterly releases to continuous delivery. I believe great infrastructure is invisible — it just works.',
+    about_experience: '7+',
+    about_deployments: '500+',
+    about_uptime: '99.99%',
+    background_color: '#0a0e17',
+    surface_color: '#111827',
+    text_color: '#c8d1e0',
+    primary_action_color: '#00ff88',
+    secondary_action_color: '#60a5fa',
+    font_family: 'Outfit',
+    font_size: 16
+  };
+
+  function applyConfig(config) {
+    const c = { ...defaultConfig, ...config };
+    document.getElementById('el-hero-name').textContent = c.hero_name;
+    document.getElementById('el-hero-tagline').textContent = c.hero_tagline;
+    document.getElementById('el-hero-desc').textContent = c.hero_description;
+    document.getElementById('el-about-text').textContent = c.about_text;
+    document.getElementById('el-about-exp').textContent = c.about_experience;
+    document.getElementById('el-about-deploys').textContent = c.about_deployments;
+    document.getElementById('el-about-uptime').textContent = c.about_uptime;
+
+    const app = document.getElementById('app');
+    app.style.color = c.text_color;
+    app.style.fontFamily = `${c.font_family}, Outfit, sans-serif`;
+
+    document.querySelectorAll('.project-card, [style*="background:#111827"]').forEach(el => {
+      el.style.backgroundColor = c.surface_color;
+    });
+
+    document.getElementById('el-hero-name').style.fontSize = `${c.font_size * 3}px`;
+    document.getElementById('el-hero-tagline').style.fontSize = `${c.font_size * 1.5}px`;
+    document.getElementById('el-hero-desc').style.fontSize = `${c.font_size}px`;
+    document.getElementById('el-about-text').style.fontSize = `${c.font_size}px`;
+
+    // Primary action color
+    document.getElementById('el-hero-tagline').style.color = c.primary_action_color;
+    document.querySelectorAll('[style*="color:#00ff88"]').forEach(el => el.style.color = c.primary_action_color);
+    document.getElementById('el-about-exp').style.color = c.primary_action_color;
+
+    // Secondary action
+    document.getElementById('el-about-deploys').style.color = c.secondary_action_color;
+  }
+
+  if (window.elementSdk) {
+    window.elementSdk.init({
+      defaultConfig,
+      onConfigChange: async (config) => applyConfig(config),
+      mapToCapabilities: (config) => ({
+        recolorables: [
+          { get: () => config.surface_color || defaultConfig.surface_color, set: v => { config.surface_color = v; window.elementSdk.setConfig({ surface_color: v }); } },
+          { get: () => config.text_color || defaultConfig.text_color, set: v => { config.text_color = v; window.elementSdk.setConfig({ text_color: v }); } },
+          { get: () => config.primary_action_color || defaultConfig.primary_action_color, set: v => { config.primary_action_color = v; window.elementSdk.setConfig({ primary_action_color: v }); } },
+          { get: () => config.secondary_action_color || defaultConfig.secondary_action_color, set: v => { config.secondary_action_color = v; window.elementSdk.setConfig({ secondary_action_color: v }); } },
+        ],
+        borderables: [],
+        fontEditable: {
+          get: () => config.font_family || defaultConfig.font_family,
+          set: v => { config.font_family = v; window.elementSdk.setConfig({ font_family: v }); }
+        },
+        fontSizeable: {
+          get: () => config.font_size || defaultConfig.font_size,
+          set: v => { config.font_size = v; window.elementSdk.setConfig({ font_size: v }); }
+        }
+      }),
+      mapToEditPanelValues: (config) => new Map([
+        ['hero_name', config.hero_name || defaultConfig.hero_name],
+        ['hero_tagline', config.hero_tagline || defaultConfig.hero_tagline],
+        ['hero_description', config.hero_description || defaultConfig.hero_description],
+        ['about_text', config.about_text || defaultConfig.about_text],
+        ['about_experience', config.about_experience || defaultConfig.about_experience],
+        ['about_deployments', config.about_deployments || defaultConfig.about_deployments],
+        ['about_uptime', config.about_uptime || defaultConfig.about_uptime],
+      ])
+    });
+  }
+
+  lucide.createIcons();
+</script>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9f1fb6ef03aa3593',t:'MTc3NzE0NDkyNi4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
