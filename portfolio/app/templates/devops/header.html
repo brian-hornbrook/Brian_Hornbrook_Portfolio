@@ -1,0 +1,32 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="{% static 'images/devops/terminal.svg' %}">
+  <title>Brian Carter — DevOps Engineer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;600;700&family=Syne:wght@400;700;800&display=swap"
+        rel="stylesheet">
+
+  <!-- styles -->
+  <link rel="stylesheet" href="{% static 'css/devops/design.css' %}">
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-logo">brian@devops<span>:~$</span></div>
+  <ul>
+    <li><a href="#intro">home</a></li>
+    <li><a href="#projects">projects</a></li>
+    <li><a href="#skills">skills</a></li>
+    <li><a href="#about">about</a></li>
+  </ul>
+  <div class="nav-status">
+    <div class="status-dot"></div>
+    available for work
+  </div>
+</nav>
