@@ -125,7 +125,6 @@ nav a:hover {
 
 /* SECTIONS */
 section {
-  min-height: 100vh;
   padding: 100px 0 60px;
 }
 
@@ -139,7 +138,7 @@ section {
 #intro {
   display: flex;
   align-items: center;
-  padding-top: 0;
+  margin-block: 40px;
   position: relative;
   overflow: hidden;
 }
