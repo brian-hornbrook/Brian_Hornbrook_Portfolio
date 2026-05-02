@@ -1,0 +1,275 @@
+{% extends 'partials/base.html' %}
+{% load static %}
+
+{% block content %}
+
+<body>
+
+<main>
+  <div id="projects">
+    <h2>Projects</h2>
+    <div id="projecs-info">
+
+      <div id="projects-container">
+        <div class="area">
+          <div class="image-area">
+            <a href="/repos" target="_blank">
+              <img src="{% static 'images/github-repo.png' %}" alt="project image">
+            </a>
+          </div>
+          <h4>GitHub Repo Gallery</h4>
+          <div class="project-description-area">
+            <p>Listing for all my GitHub repos.</p>
+          </div>
+          <div class="tools">
+            <p><strong>Skills:</strong> Manipulate the DOM, Version control</p>
+            <p><strong>Tools:</strong> GitHub, API, UI</p>
+          </div>
+          <div class="live-page-button">
+            <a href="repos" target="_blank">
+              <button>Live Page</button>
+            </a>
+          </div>
+        </div>
+
+        <div class="area">
+          <div class="image-area">
+            <a href="https://www.abwolp.com" target="_blank">
+              <img src="{% static 'images/better_way_logo.png' %}" alt="project image"
+                   style="background-color: #453e4f; border-radius: 100px;">
+            </a>
+          </div>
+          <h4>A Better Way of Life Productions</h4>
+          <div class="project-description-area">
+            <p>A Christian Business that endeavors to operate in the following manner.</p>
+          </div>
+          <div class="tools">
+            <p><strong>Skills:</strong> Glass Bubble Design, AI Automation</p>
+            <p><strong>Tools:</strong> Django</p>
+          </div>
+          <div class="live-page-button">
+            <a href="https://www.abwolp.com" target="_blank">
+              <button>Live Page</button>
+            </a>
+            <div>
+            </div>
+          </div>
+        </div>
+
+        <div class="area">
+          <div class="image-area">
+            <a href="https://sthwom.org" target="_blank">
+              <img src="{% static 'images/brand.png' %}" alt="project image">
+            </a>
+          </div>
+          <h4>Seed Time and Harvest</h4>
+          <div class="project-description-area">
+            <p>Demonstration of ministry focus.</p>
+          </div>
+          <div class="tools">
+            <p><strong>Skills:</strong> Responsive Site, Contact Form</p>
+            <p><strong>Tools:</strong> Symfony, Recapta</p>
+          </div>
+          <div class="live-page-button">
+            <a href="https://sthwom.org" target="_blank">
+              <button>Live Page</button>
+            </a>
+            <div>
+            </div>
+          </div>
+        </div>
+
+        <div class="area">
+          <div class="image-area">
+            <a href="https://marianascleaningservicellc.com" target="_blank">
+              <img src="{% static 'images/marianas-logo.png' %}" alt="project image">
+            </a>
+          </div>
+          <h4>Marianas Cleaning Service LLS</h4>
+          <div class="project-description-area">
+            <p>Listing all cleaning services.</p>
+          </div>
+          <div class="tools">
+            <p><strong>Skills:</strong> Databases, Accounts, Contact Form</p>
+            <p><strong>Tools:</strong> Django, Superuser, Authentication, Responsive Site</p>
+          </div>
+          <div class="live-page-button">
+            <a href="https://marianascleaningservicellc.com" target="_blank">
+              <button>Live Page</button>
+            </a>
+            <div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div id="skills">
+        <h2>Skills</h2>
+
+        <div class="skill-section">
+          <h3>Security</h3>
+          <div id="my-skills" class="skills-container">
+            <div class="item">
+              <p>Linux Hardening</p>
+            </div>
+            <div class="item">
+              <p>Firewall Configuration</p>
+            </div>
+            <div class="item">
+              <p>SSL/TLS (Let's Encrypt)</p>
+            </div>
+            <div class="item">
+              <p>DNS security</p>
+            </div>
+            <div class="item">
+              <p>OWASP Top 10</p>
+            </div>
+            <div class="item">
+              <p>secure credential management</p>
+            </div>
+            <div class="item">
+              <p>log analysis & anomaly detection</p>
+            </div>
+            <div class="item">
+              <p>Incident Response</p>
+            </div>
+          </div>
+        </div>
+        <div class="skill-section">
+          <h3>DevOps / Infra</h3>
+          <div id="my-tools" class="skills-container">
+            <div class="item">
+              <p>Docker / Docker Compose</p>
+            </div>
+            <div class="item">
+              <p>Traefik reverse proxy</p>
+            </div>
+            <div class="item">
+              <p> VPS administration (Debian)</p>
+            </div>
+            <div class="item">
+              <p>multi-site hosting</p>
+            </div>
+            <div class="item">
+              <p>CI/CD Pipelines</p>
+            </div>
+            <div class="item">
+              <p>SSH key management</p>
+            </div>
+          </div>
+        </div>
+        <div class="skill-section">
+          <h3>Web Dev</h3>
+          <div id="my-frameworks" class="skills-container">
+            <div class="item">
+              <p>Django</p>
+            </div>
+            <div class="item">
+              <p>Python</p>
+            </div>
+            <div class="item">
+              <p>PostgresSQL</p>
+            </div>
+            <div class="item">
+              <p>REST APIs</p>
+            </div>
+            <div class="item">
+              <p>HTML / CSS / JS</p>
+            </div>
+            <div class="item">
+              <p>Cloudflare</p>
+            </div>
+            <div class="item">
+              <p>stom domain configuration</p>
+            </div>
+            <div class="item">
+              <p>Proton Mail (privacy-first email)</p>
+            </div>
+          </div>
+        </div>
+        <div class="skill-section">
+          <h3>Networking</h3>
+          <div id="networking" class="skills-container">
+            <div class="item">
+              <p>DNS (A, CNAME, MX, TXT records)</p>
+            </div>
+            <div class="item">
+              <p>HTTP / HTTPS</p>
+            </div>
+            <div class="item">
+              <p>reverse proxy architecture</p>
+            </div>
+            <div class="item">
+              <p>domain routing</p>
+            </div>
+            <div class="item">
+              <p>CDN configuration</p>
+            </div>
+          </div>
+        </div>
+        <div class="skill-section">
+          <h3>AI / Automation</h3>
+          <div id="ai-automation" class="skills-container">
+            <div class="item">
+              <p>Anthropic Claude API integration</p>
+            </div>
+            <div class="item">
+              <p>rompt engineering</p>
+            </div>
+            <div class="item">
+              <p>AI-powered widget development</p>
+            </div>
+            <div class="item">
+              <p>Python scripting & automation</p>
+            </div>
+          </div>
+        </div>
+        <div class="skill-section">
+          <h3>Other</h3>
+          <div id="tools-platforms" class="skills-container">
+            <div class="item">
+              <p>Git / GitHub</p>
+            </div>
+            <div class="item">
+              <p>VS Code / Jetbrains</p>
+            </div>
+            <div class="item">
+              <p>Cloudflare dashboard</p>
+            </div>
+            <div class="item">
+              <p>Linux CLI</p>
+            </div>
+            <div class="item">
+              <p>Linux CLI</p>
+            </div>
+            <div class="item">
+              <p>configuration management</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="about">
+        <div id="image-area">
+          <img src="{% static 'images/resume_pic.jpg' %}" alt="resume">
+        </div>
+        <h2>I'm Brian Hornbrook, a passionate programmer dedicated to leveraging Infrustructure as Code and AI to create impactful solutions.</h2>
+        <h3>Years ago I tried out programming and built a simple pong game using a web
+          program that was very similar to Python. I immediately fell in love with
+          building using logic.</h3>
+        <p>
+          When I go on vacation, I like to approach it like writing a well-structured program. I plan out our route and
+          accommodations ahead of time, optimizing for the best quality rather than just accepting what's placed in front
+          of me. Optimizing algorithms instead of running the first one created.
+        </p>
+        <p id="message">
+          <strong>Can't wait to see what we build together!</strong>
+        </p>
+
+
+      </div>
+    </div>
+  </div>
+
+{% endblock content %}
