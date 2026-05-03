@@ -3,6 +3,9 @@ from django.shortcuts import render
 def home(request):
     return render(request, 'index.html')
 
+def cybersecurity(request):
+    return render(request, 'backup/cybersecurity.html')
+
 def devops(request):
     return render(request, 'devops/devops.html')
 
