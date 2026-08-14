@@ -1,17 +1,17 @@
-{% extends 'partials/base.html' %}
-{% load static %}
-
-{% block content %}
+{% extends 'partials/base.html' %} {% load static %} {% block content %}
 
 <!-- HERO -->
 <section id="intro">
   <div class="hero-grid">
-    <div style="animation: fadeUp 0.7s both;">
-      <div class="hero-label">Full-Stack Developer & Infrastructure Builder</div>
-      <h1>Ship fast.<br><span class="highlight">Break nothing.</span></h1>
+    <div style="animation: fadeUp 0.7s both">
+      <div class="hero-label">
+        Full-Stack Developer & Infrastructure Builder
+      </div>
+      <h1>Ship fast.<br /><span class="highlight">Break nothing.</span></h1>
       <p class="hero-sub">
-        I build production Django apps and manage the infrastructure they run on — Docker containers, Traefik reverse
-        proxies, VPS deployments, and Cloudflare DNS. Self-taught, production-hardened.
+        I build production Django apps and manage the infrastructure they run on
+        — Docker containers, Traefik reverse proxies, VPS deployments, and
+        Cloudflare DNS. Self-taught, production-hardened.
       </p>
       <div class="hero-cta">
         <a href="#projects" class="btn btn-primary">▶ View Projects</a>
@@ -27,24 +27,47 @@
         <div class="t-title">brian@prod-cluster — bash</div>
       </div>
       <div class="terminal-body">
-        <div><span class="t-prompt">❯</span> <span class="t-cmd">docker compose up -d</span></div>
-        <div class="t-out"><span style="color:var(--green)">✔</span> Container traefik&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Started
+        <div>
+          <span class="t-prompt">❯</span>
+          <span class="t-cmd">docker compose up -d</span>
         </div>
-        <div class="t-out"><span style="color:var(--green)">✔</span> Container django_app&nbsp;&nbsp;Started</div>
-        <div class="t-out"><span style="color:var(--green)">✔</span> Container postgres&nbsp;&nbsp;&nbsp;&nbsp;Started
+        <div class="t-out">
+          <span style="color: var(--green)">✔</span> Container
+          traefik&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Started
         </div>
-        <div style="margin-top: 0.5rem;"><span class="t-prompt">❯</span> <span
-                class="t-cmd">python manage.py migrate</span></div>
+        <div class="t-out">
+          <span style="color: var(--green)">✔</span> Container
+          django_app&nbsp;&nbsp;Started
+        </div>
+        <div class="t-out">
+          <span style="color: var(--green)">✔</span> Container
+          postgres&nbsp;&nbsp;&nbsp;&nbsp;Started
+        </div>
+        <div style="margin-top: 0.5rem">
+          <span class="t-prompt">❯</span>
+          <span class="t-cmd">python manage.py migrate</span>
+        </div>
         <div class="t-out">Running migrations:</div>
-        <div class="t-out">&nbsp;&nbsp;<span style="color:var(--green)">Applying</span> quotes.0004_auto... <span
-                style="color:var(--green)">OK</span></div>
-        <div class="t-out">&nbsp;&nbsp;<span style="color:var(--green)">Applying</span> core.0011_user... <span
-                style="color:var(--green)">OK</span></div>
-        <div style="margin-top: 0.5rem;"><span class="t-prompt">❯</span> <span
-                class="t-cmd">cat .env | grep CLAUDE</span></div>
-        <div class="t-out"><span class="t-key">CLAUDE_API_KEY</span>=<span
-                class="t-val">sk-ant-**********************</span></div>
-        <div style="margin-top: 0.5rem;"><span class="t-prompt">❯</span> <span class="cursor"></span></div>
+        <div class="t-out">
+          &nbsp;&nbsp;<span style="color: var(--green)">Applying</span>
+          quotes.0004_auto... <span style="color: var(--green)">OK</span>
+        </div>
+        <div class="t-out">
+          &nbsp;&nbsp;<span style="color: var(--green)">Applying</span>
+          core.0011_user... <span style="color: var(--green)">OK</span>
+        </div>
+        <div style="margin-top: 0.5rem">
+          <span class="t-prompt">❯</span>
+          <span class="t-cmd">cat .env | grep CLAUDE</span>
+        </div>
+        <div class="t-out">
+          <span class="t-key">CLAUDE_API_KEY</span>=<span class="t-val"
+            >sk-ant-**********************</span
+          >
+        </div>
+        <div style="margin-top: 0.5rem">
+          <span class="t-prompt">❯</span> <span class="cursor"></span>
+        </div>
       </div>
     </div>
   </div>
@@ -60,10 +83,9 @@
     </div>
 
     <div class="projects-grid">
-
-      <div class="project-card fade-in" style="transition-delay:0.2s">
+      <div class="project-card fade-in" style="transition-delay: 0.2s">
         <div class="project-icon">
-          <img src="{% static 'images/devops_icon.png' %}" alt="devops icon">
+          <img src="{% static 'images/devops_icon.png' %}" alt="devops icon" />
         </div>
         <div class="project-name">Enterprise Pipelines</div>
         <div class="project-desc">
@@ -75,7 +97,6 @@
             Maintained Vue.js apps running in production minimizing downtime by
             fixing JavaScript quickly and anticipating possible issues.
           </p>
-
         </div>
         <div class="project-tags">
           <span class="tag tag-blue">CI/CD | IaC</span>
@@ -90,8 +111,10 @@
       <div class="project-card fade-in">
         <div class="project-icon">🌿</div>
         <div class="project-name">Clean Cut Electric — Web Platform</div>
-        <div class="project-desc">Full Django web app for an organic electric lawn care business. Custom quoting form,
-          contact forms, and service pages — all self-hosted on VPS.
+        <div class="project-desc">
+          Full Django web app for an organic electric lawn care business. Custom
+          quoting form, contact forms, and service pages — all self-hosted on
+          VPS.
         </div>
         <div class="project-tags">
           <span class="tag tag-amber">Custom Quoting Form</span>
@@ -99,15 +122,22 @@
         </div>
         <div class="project-meta">
           <span>cleancutelectric.com</span>
-          <a target="_blank" href="https://cleancutelectric.com" class="project-link">→ Live Site</a>
+          <a
+            target="_blank"
+            href="https://cleancutelectric.com"
+            class="project-link"
+            >→ Live Site</a
+          >
         </div>
       </div>
 
-      <div class="project-card fade-in" style="transition-delay:0.1s">
+      <div class="project-card fade-in" style="transition-delay: 0.1s">
         <div class="project-icon">💻</div>
         <div class="project-name">Your Quality Programmer — Portfolio</div>
-        <div class="project-desc">Luxury editorial portfolio site for a web dev/hosting business. Frontend desgin with
-          animated skill bars, Bebas Neue + Cormorant Garamond typography, and gold accent design system.
+        <div class="project-desc">
+          Luxury editorial portfolio site for a web dev/hosting business.
+          Frontend desgin with animated skill bars, Bebas Neue + Cormorant
+          Garamond typography, and gold accent design system.
         </div>
         <div class="project-tags">
           <span class="tag tag-blue">Contact Form</span>
@@ -115,15 +145,22 @@
         </div>
         <div class="project-meta">
           <span>yourqualityprogrammer.com</span>
-          <a target="_blank" href="https://brianhornbrook.com" class="project-link">→ Live Site</a>
+          <a
+            target="_blank"
+            href="https://brianhornbrook.com"
+            class="project-link"
+            >→ Live Site</a
+          >
         </div>
       </div>
 
-      <div class="project-card fade-in" style="transition-delay:0.05s">
+      <div class="project-card fade-in" style="transition-delay: 0.05s">
         <div class="project-icon">🌐</div>
         <div class="project-name">Multi-Site VPS Infrastructure</div>
-        <div class="project-desc">Self-managed VPS running multiple Django sites behind Traefik reverse proxy with
-          automatic Let's Encrypt TLS. Docker Compose orchestration, Cloudflare DNS, and multi-domain cert management.
+        <div class="project-desc">
+          Self-managed VPS running multiple Django sites behind Traefik reverse
+          proxy with automatic Let's Encrypt TLS. Docker Compose orchestration,
+          Cloudflare DNS, and multi-domain cert management.
         </div>
         <div class="project-tags">
           <span class="tag tag-red">Docker</span>
@@ -135,11 +172,13 @@
         </div>
       </div>
 
-      <div class="project-card fade-in" style="transition-delay:0.15s">
+      <div class="project-card fade-in" style="transition-delay: 0.15s">
         <div class="project-icon">📧</div>
         <div class="project-name">Proton Mail Business Setup</div>
-        <div class="project-desc">Configured Proton Mail for Business across two custom domains (cleancutelectric.com +
-          yourqualityprogrammer.com) with full Cloudflare MX, SPF, DKIM, and DMARC record management.
+        <div class="project-desc">
+          Configured Proton Mail for Business across two custom domains
+          (cleancutelectric.com + yourqualityprogrammer.com) with full
+          Cloudflare MX, SPF, DKIM, and DMARC record management.
         </div>
         <div class="project-tags">
           <span class="tag tag-blue">Cloudflare DNS</span>
@@ -151,11 +190,13 @@
         </div>
       </div>
 
-      <div class="project-card fade-in" style="transition-delay:0.25s">
+      <div class="project-card fade-in" style="transition-delay: 0.25s">
         <div class="project-icon">📋</div>
         <div class="project-name">Django Form System</div>
-        <div class="project-desc">Custom Django form components with RadioSelect widgets, CSS overrides, .env config via
-          python-dotenv, and styled multi-step quote flows. Solved label/ID mismatch bugs in production.
+        <div class="project-desc">
+          Custom Django form components with RadioSelect widgets, CSS overrides,
+          .env config via python-dotenv, and styled multi-step quote flows.
+          Solved label/ID mismatch bugs in production.
         </div>
         <div class="project-tags">
           <span class="tag tag-green">Django</span>
@@ -166,7 +207,6 @@
           <span>Production hardened</span>
         </div>
       </div>
-
     </div>
   </div>
 </section>
@@ -182,113 +222,50 @@
 
     <div class="skills-layout">
       <div class="skills-categories">
-        <button class="skill-cat-btn active" data-panel="backend">Backend</button>
+        <button class="skill-cat-btn active" data-panel="cloud">Cloud</button>
+        <button class="skill-cat-btn" data-panel="containers">Containers</button>
+        <button class="skill-cat-btn" data-panel="proxy">Reverse Proxy</button>
+        <button class="skill-cat-btn" data-panel="backend">Backend</button>
+        <button class="skill-cat-btn" data-panel="databases">Databases</button>
         <button class="skill-cat-btn" data-panel="infra">Infrastructure</button>
+        <button class="skill-cat-btn" data-panel="dns">DNS & Email</button>
         <button class="skill-cat-btn" data-panel="frontend">Frontend</button>
-        <button class="skill-cat-btn" data-panel="ai">AI & APIs</button>
       </div>
 
       <div>
-        <div class="skills-panel active" id="panel-backend">
+        <!-- Cloud Panel-->
+        <div class="skills-panel active" id="panel-cloud">
           <div class="skill-grid">
-            <div class="skill-item" style="--pct:85%">
-              <div class="skill-name">Python</div>
+            <div class="skill-item" style="--pct: 85%">
+              <div class="skill-name">AWS</div>
               <div class="skill-level-label">Advanced</div>
               <div class="skill-bar-bg">
                 <div class="skill-bar-fill"></div>
               </div>
             </div>
-            <div class="skill-item" style="--pct:82%">
-              <div class="skill-name">Django</div>
+            <div class="skill-item" style="--pct: 85%">
+              <div class="skill-name">Linux (Ubuntu)</div>
               <div class="skill-level-label">Advanced</div>
               <div class="skill-bar-bg">
                 <div class="skill-bar-fill"></div>
               </div>
             </div>
-            <div class="skill-item" style="--pct:80%">
-              <div class="skill-name">PostgreSQL</div>
-              <div class="skill-level-label">Advanced</div>
-              <div class="skill-bar-bg">
-                <div class="skill-bar-fill"></div>
-              </div>
-            </div>
-            <div class="skill-item" style="--pct:72%">
-              <div class="skill-name">Django ORM</div>
-              <div class="skill-level-label">Advanced</div>
-              <div class="skill-bar-bg">
-                <div class="skill-bar-fill"></div>
-              </div>
-            </div>
-            <div class="skill-item" style="--pct:70%">
-              <div class="skill-name">Django Forms</div>
-              <div class="skill-level-label">Advanced</div>
-              <div class="skill-bar-bg">
-                <div class="skill-bar-fill"></div>
-              </div>
-            </div>
-            <div class="skill-item" style="--pct:65%">
-              <div class="skill-name">python-dotenv / .env</div>
-              <div class="skill-level-label">Proficient</div>
-              <div class="skill-bar-bg">
-                <div class="skill-bar-fill"></div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="skills-panel" id="panel-infra">
-          <div class="skill-grid">
-            <div class="skill-item" style="--pct:85%">
-              <div class="skill-name">Docker</div>
-              <div class="skill-level-label">Advanced</div>
-              <div class="skill-bar-bg">
-                <div class="skill-bar-fill"></div>
-              </div>
-            </div>
-            <div class="skill-item" style="--pct:80%">
-              <div class="skill-name">Docker Compose</div>
-              <div class="skill-level-label">Advanced</div>
-              <div class="skill-bar-bg">
-                <div class="skill-bar-fill"></div>
-              </div>
-            </div>
-            <div class="skill-item" style="--pct:78%">
-              <div class="skill-name">Traefik</div>
-              <div class="skill-level-label">Advanced</div>
-              <div class="skill-bar-bg">
-                <div class="skill-bar-fill"></div>
-              </div>
-            </div>
-            <div class="skill-item" style="--pct:75%">
-              <div class="skill-name">Cloudflare DNS</div>
-              <div class="skill-level-label">Advanced</div>
-              <div class="skill-bar-bg">
-                <div class="skill-bar-fill"></div>
-              </div>
-            </div>
-            <div class="skill-item" style="--pct:72%">
+            <div class="skill-item" style="--pct: 85%">
               <div class="skill-name">VPS Management</div>
               <div class="skill-level-label">Advanced</div>
               <div class="skill-bar-bg">
                 <div class="skill-bar-fill"></div>
               </div>
             </div>
-            <div class="skill-item" style="--pct:70%">
-              <div class="skill-name">Let's Encrypt / TLS</div>
-              <div class="skill-level-label">Advanced</div>
-              <div class="skill-bar-bg">
-                <div class="skill-bar-fill"></div>
-              </div>
-            </div>
-            <div class="skill-item" style="--pct:65%">
-              <div class="skill-name">Linux / Ubuntu</div>
+            <div class="skill-item" style="--pct: 70%">
+              <div class="skill-name">Cloudflare</div>
               <div class="skill-level-label">Proficient</div>
               <div class="skill-bar-bg">
                 <div class="skill-bar-fill"></div>
               </div>
             </div>
-            <div class="skill-item" style="--pct:62%">
-              <div class="skill-name">MX / CNAME / TXT</div>
+            <div class="skill-item" style="--pct: 60%">
+              <div class="skill-name">Let's Encrypt</div>
               <div class="skill-level-label">Proficient</div>
               <div class="skill-bar-bg">
                 <div class="skill-bar-fill"></div>
@@ -296,39 +273,251 @@
             </div>
           </div>
         </div>
-
-        <div class="skills-panel" id="panel-frontend">
+        <!-- Containers Panel-->
+        <div class="skills-panel" id="panel-containers">
           <div class="skill-grid">
-            <div class="skill-item" style="--pct:80%">
-              <div class="skill-name">jQuery / DOM</div>
+            <div class="skill-item" style="--pct: 85%">
+              <div class="skill-name">Docker</div>
               <div class="skill-level-label">Advanced</div>
               <div class="skill-bar-bg">
                 <div class="skill-bar-fill"></div>
               </div>
             </div>
-            <div class="skill-item" style="--pct:75%">
+            <div class="skill-item" style="--pct: 85%">
+              <div class="skill-name">Docker Compose</div>
+              <div class="skill-level-label">Advanced</div>
+              <div class="skill-bar-bg">
+                <div class="skill-bar-fill"></div>
+              </div>
+            </div>
+            <div class="skill-item" style="--pct: 85%">
+              <div class="skill-name">Multi-Container Orchestration</div>
+              <div class="skill-level-label">Advanced</div>
+              <div class="skill-bar-bg">
+                <div class="skill-bar-fill"></div>
+              </div>
+            </div>
+            <div class="skill-item" style="--pct: 70%">
+              <div class="skill-name">Volume Management</div>
+              <div class="skill-level-label">Proficient</div>
+              <div class="skill-bar-bg">
+                <div class="skill-bar-fill"></div>
+              </div>
+            </div>
+            <div class="skill-item" style="--pct: 70%">
+              <div class="skill-name">Networking</div>
+              <div class="skill-level-label">Proficient</div>
+              <div class="skill-bar-bg">
+                <div class="skill-bar-fill"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Reverse Proxy Panel-->
+        <div class="skills-panel" id="panel-proxy">
+          <div class="skill-grid">
+            <div class="skill-item" style="--pct: 75%">
+              <div class="skill-name">Trafik</div>
+              <div class="skill-level-label">Proficient</div>
+              <div class="skill-bar-bg">
+                <div class="skill-bar-fill"></div>
+              </div>
+            </div>
+            <div class="skill-item" style="--pct: 70%">
+              <div class="skill-name">Nginx</div>
+              <div class="skill-level-label">Proficient</div>
+              <div class="skill-bar-bg">
+                <div class="skill-bar-fill"></div>
+              </div>
+            </div>
+            <div class="skill-item" style="--pct: 70%">
+              <div class="skill-name">Gunicorn</div>
+              <div class="skill-level-label">Proficient</div>
+              <div class="skill-bar-bg">
+                <div class="skill-bar-fill"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Backend Panel-->
+        <div class="skills-panel" id="panel-backend">
+          <div class="skill-grid">
+            <div class="skill-item" style="--pct: 85%">
+              <div class="skill-name">Python</div>
+              <div class="skill-level-label">Advanced</div>
+              <div class="skill-bar-bg">
+                <div class="skill-bar-fill"></div>
+              </div>
+            </div>
+            <div class="skill-item" style="--pct: 85%">
+              <div class="skill-name">Django</div>
+              <div class="skill-level-label">Advanced</div>
+              <div class="skill-bar-bg">
+                <div class="skill-bar-fill"></div>
+              </div>
+            </div>
+            <div class="skill-item" style="--pct: 85%">
+              <div class="skill-name">PHP</div>
+              <div class="skill-level-label">Advanced</div>
+              <div class="skill-bar-bg">
+                <div class="skill-bar-fill"></div>
+              </div>
+            </div>
+            <div class="skill-item" style="--pct: 85%">
+              <div class="skill-name">Symfony</div>
+              <div class="skill-level-label">Advanced</div>
+              <div class="skill-bar-bg">
+                <div class="skill-bar-fill"></div>
+              </div>
+            </div>
+            <div class="skill-item" style="--pct: 70%">
+              <div class="skill-name">Bash</div>
+              <div class="skill-level-label">Proficient</div>
+              <div class="skill-bar-bg">
+                <div class="skill-bar-fill"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Database Panel-->
+        <div class="skills-panel" id="panel-databases">
+          <div class="skill-grid">
+            <div class="skill-item" style="--pct: 85%">
+              <div class="skill-name">Django ORM/Forms</div>
+              <div class="skill-level-label">Advanced</div>
+              <div class="skill-bar-bg">
+                <div class="skill-bar-fill"></div>
+              </div>
+            </div>
+            <div class="skill-item" style="--pct: 85%">
+              <div class="skill-name">Symfony ORM/Forms</div>
+              <div class="skill-level-label">Advanced</div>
+              <div class="skill-bar-bg">
+                <div class="skill-bar-fill"></div>
+              </div>
+            </div>
+            <div class="skill-item" style="--pct: 60%">
+              <div class="skill-name">PostgreSQL/MySQL</div>
+              <div class="skill-level-label">Proficient</div>
+              <div class="skill-bar-bg">
+                <div class="skill-bar-fill"></div>
+              </div>
+            </div>
+            <div class="skill-item" style="--pct: 60%">
+              <div class="skill-name">backups</div>
+              <div class="skill-level-label">Proficient</div>
+              <div class="skill-bar-bg">
+                <div class="skill-bar-fill"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Infrastructure Panel-->
+        <div class="skills-panel" id="panel-infra">
+          <div class="skill-grid">
+            <div class="skill-item" style="--pct: 85%">
+              <div class="skill-name">CI/CD</div>
+              <div class="skill-level-label">Advanced</div>
+              <div class="skill-bar-bg">
+                <div class="skill-bar-fill"></div>
+              </div>
+            </div>
+            <div class="skill-item" style="--pct: 85%">
+              <div class="skill-name">IaC</div>
+              <div class="skill-level-label">Advanced</div>
+              <div class="skill-bar-bg">
+                <div class="skill-bar-fill"></div>
+              </div>
+            </div>
+            <div class="skill-item" style="--pct: 85%">
+              <div class="skill-name">Git/Github</div>
+              <div class="skill-level-label">Advanced</div>
+              <div class="skill-bar-bg">
+                <div class="skill-bar-fill"></div>
+              </div>
+            </div>
+            <div class="skill-item" style="--pct: 85%">
+              <div class="skill-name">Environment Configuration</div>
+              <div class="skill-level-label">Advanced</div>
+              <div class="skill-bar-bg">
+                <div class="skill-bar-fill"></div>
+              </div>
+            </div>
+            <div class="skill-item" style="--pct: 85%">
+              <div class="skill-name">.env Management</div>
+              <div class="skill-level-label">Advanced</div>
+              <div class="skill-bar-bg">
+                <div class="skill-bar-fill"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- DNS & Email Panel-->
+        <div class="skills-panel" id="panel-dns">
+          <div class="skill-grid">
+            <div class="skill-item" style="--pct: 85%">
+              <div class="skill-name">MX, CNAME and TXT Records</div>
+              <div class="skill-level-label">Advanced</div>
+              <div class="skill-bar-bg">
+                <div class="skill-bar-fill"></div>
+              </div>
+            </div>
+            <div class="skill-item" style="--pct: 85%">
+              <div class="skill-name">Proton for Business</div>
+              <div class="skill-level-label">Advanced</div>
+              <div class="skill-bar-bg">
+                <div class="skill-bar-fill"></div>
+              </div>
+            </div>
+            <div class="skill-item" style="--pct: 85%">
+              <div class="skill-name">Multi-Domain Email setup</div>
+              <div class="skill-level-label">Advanced</div>
+              <div class="skill-bar-bg">
+                <div class="skill-bar-fill"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Frontend Panel-->
+        <div class="skills-panel" id="panel-frontend">
+          <div class="skill-grid">
+            <div class="skill-item" style="--pct: 85%">
+              <div class="skill-name">HTML/CSS/JS</div>
+              <div class="skill-level-label">Advanced</div>
+              <div class="skill-bar-bg">
+                <div class="skill-bar-fill"></div>
+              </div>
+            </div>
+            <div class="skill-item" style="--pct: 85%">
+              <div class="skill-name">jQuery/DOM</div>
+              <div class="skill-level-label">Advanced</div>
+              <div class="skill-bar-bg">
+                <div class="skill-bar-fill"></div>
+              </div>
+            </div>
+            <div class="skill-item" style="--pct: 85%">
               <div class="skill-name">Responsive Typography</div>
               <div class="skill-level-label">Advanced</div>
               <div class="skill-bar-bg">
                 <div class="skill-bar-fill"></div>
               </div>
             </div>
-            <div class="skill-item" style="--pct:80%">
-              <div class="skill-name">JavaScript</div>
+            <div class="skill-item" style="--pct: 85%">
+              <div class="skill-name">Django/Symfony Templates</div>
               <div class="skill-level-label">Advanced</div>
               <div class="skill-bar-bg">
                 <div class="skill-bar-fill"></div>
               </div>
             </div>
-            <div class="skill-item" style="--pct:70%">
-              <div class="skill-name">Django Templates</div>
-              <div class="skill-level-label">Advanced</div>
+            <div class="skill-item" style="--pct: 70%">
+              <div class="skill-name">Vue.js</div>
+              <div class="skill-level-label">Proficient</div>
               <div class="skill-bar-bg">
                 <div class="skill-bar-fill"></div>
               </div>
             </div>
-            <div class="skill-item" style="--pct:60%">
-              <div class="skill-name">CSS Animations</div>
+            <div class="skill-item" style="--pct: 70%">
+              <div class="skill-name">React.js</div>
               <div class="skill-level-label">Proficient</div>
               <div class="skill-bar-bg">
                 <div class="skill-bar-fill"></div>
@@ -336,25 +525,7 @@
             </div>
           </div>
         </div>
-
-        <div class="skills-panel" id="panel-ai">
-          <div class="skill-grid">
-            <div class="skill-item" style="--pct:75%">
-              <div class="skill-name">Prompt Engineering</div>
-              <div class="skill-level-label">Advanced</div>
-              <div class="skill-bar-bg">
-                <div class="skill-bar-fill"></div>
-              </div>
-            </div>
-            <div class="skill-item" style="--pct:70%">
-              <div class="skill-name">API Integration (Django)</div>
-              <div class="skill-level-label">Advanced</div>
-              <div class="skill-bar-bg">
-                <div class="skill-bar-fill"></div>
-              </div>
-            </div>
-          </div>
-        </div>
+        
       </div>
     </div>
   </div>
@@ -371,18 +542,32 @@
 
     <div class="about-layout">
       <div class="about-text fade-in">
-        <p>I'm a self-taught engineer who built my skills from the ground up — 3 years of hands-on infrastructure work,
-          running production systems, fighting fires at 2am, and learning what actually matters when software has to
-          <strong>stay alive</strong>.</p>
-        <p>I currently run two businesses in parallel: a <strong>web development operation</strong> where I build
-          full-stack Django applications for clients, and a <strong>lawn care company</strong> (yes, really) where I
-          built custom quoting tools, automated CRM workflows, and manage all the digital infrastructure. Both taught me
-          that DevOps isn't just a job title — it's a mindset.</p>
-        <p>My focus right now is cloud engineering, particularly <strong>AWS certifications</strong> and hardening my
-          infrastructure skills for larger-scale systems. I'm drawn to problems where reliability, automation, and
-          developer experience intersect.</p>
-        <p>Outside the terminal: rural land, wooded terrain, Gulf Coast wildlife, and driving a Titan with a truck bed
-          full of gear. I believe the best engineers slow down and breathe regularly.</p>
+        <p>
+          I'm a self-taught engineer who built my skills from the ground up — 3
+          years of hands-on infrastructure work, running production systems,
+          fighting fires at 2am, and learning what actually matters when
+          software has to <strong>stay alive</strong>.
+        </p>
+        <p>
+          I currently run two businesses in parallel: a
+          <strong>web development operation</strong> where I build full-stack
+          Django applications for clients, and a
+          <strong>lawn care company</strong> (yes, really) where I built custom
+          quoting tools, automated CRM workflows, and manage all the digital
+          infrastructure. Both taught me that DevOps isn't just a job title —
+          it's a mindset.
+        </p>
+        <p>
+          My focus right now is cloud engineering, particularly
+          <strong>AWS certifications</strong> and hardening my infrastructure
+          skills for larger-scale systems. I'm drawn to problems where
+          reliability, automation, and developer experience intersect.
+        </p>
+        <p>
+          Outside the terminal: rural land, wooded terrain, Gulf Coast wildlife,
+          and driving a Titan with a truck bed full of gear. I believe the best
+          engineers slow down and breathe regularly.
+        </p>
 
         <div class="stat-grid">
           <div class="stat-box">
@@ -390,7 +575,9 @@
             <div class="stat-label">Years building</div>
           </div>
           <div class="stat-box">
-            <div class="stat-num">99.9<span style="font-size:1.2rem">%</span></div>
+            <div class="stat-num">
+              99.9<span style="font-size: 1.2rem">%</span>
+            </div>
             <div class="stat-label">Uptime target</div>
           </div>
           <div class="stat-box">
@@ -404,24 +591,40 @@
         </div>
       </div>
 
-      <div class="fade-in" style="transition-delay:0.15s">
-        <div style="font-size:11px;letter-spacing:0.15em;text-transform:uppercase;color:var(--text3);margin-bottom:1rem;">
+      <div class="fade-in" style="transition-delay: 0.15s">
+        <div
+          style="
+            font-size: 11px;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: var(--text3);
+            margin-bottom: 1rem;
+          "
+        >
           Experience & Background
         </div>
         <div class="cert-list">
           <div class="cert-item">
             <div class="cert-icon">🌿</div>
             <div>
-              <div class="cert-name">Clean Cut Electric — Founder & Developer</div>
-              <div class="cert-org">Organic electric lawn care · cleancutelectric.com</div>
+              <div class="cert-name">
+                Clean Cut Electric — Founder & Developer
+              </div>
+              <div class="cert-org">
+                Organic electric lawn care · cleancutelectric.com
+              </div>
             </div>
             <div class="cert-year">2026–Now</div>
           </div>
           <div class="cert-item">
             <div class="cert-icon">💻</div>
             <div>
-              <div class="cert-name">Your Quality Programmer — Web Dev & Hosting</div>
-              <div class="cert-org">Full-stack Django development for clients</div>
+              <div class="cert-name">
+                Your Quality Programmer — Web Dev & Hosting
+              </div>
+              <div class="cert-org">
+                Full-stack Django development for clients
+              </div>
             </div>
             <div class="cert-year">2022–Now</div>
           </div>
@@ -443,19 +646,55 @@
           </div>
         </div>
 
-        <div style="margin-top:2rem;padding:1.2rem;background:var(--surface);border:1px solid var(--border);border-radius:6px;">
-          <div style="font-size:11px;letter-spacing:0.15em;text-transform:uppercase;color:var(--text3);margin-bottom:0.8rem;">
+        <div
+          style="
+            margin-top: 2rem;
+            padding: 1.2rem;
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 6px;
+          "
+        >
+          <div
+            style="
+              font-size: 11px;
+              letter-spacing: 0.15em;
+              text-transform: uppercase;
+              color: var(--text3);
+              margin-bottom: 0.8rem;
+            "
+          >
             Contact
           </div>
-          <div style="font-size:12px;color:var(--text2);line-height:2;">
-            <div>📧 &nbsp;<a href="mailto:brian@yourqualityprogrammer.com"
-                            style="color:var(--green-dim);text-decoration:none;">brian@yourqualityprogrammer.com</a>
+          <div style="font-size: 12px; color: var(--text2); line-height: 2">
+            <div>
+              📧 &nbsp;<a
+                href="mailto:brian@yourqualityprogrammer.com"
+                style="color: var(--green-dim); text-decoration: none"
+                >brian@yourqualityprogrammer.com</a
+              >
             </div>
-            <div>🌐 &nbsp;<a href="#" style="color:var(--green-dim);text-decoration:none;">yourqualityprogrammer.com</a>
+            <div>
+              🌐 &nbsp;<a
+                href="#"
+                style="color: var(--green-dim); text-decoration: none"
+                >yourqualityprogrammer.com</a
+              >
             </div>
-            <div>💼 &nbsp;<a href="#" style="color:var(--green-dim);text-decoration:none;">linkedin.com/in/brian</a>
+            <div>
+              💼 &nbsp;<a
+                href="#"
+                style="color: var(--green-dim); text-decoration: none"
+                >linkedin.com/in/brian</a
+              >
             </div>
-            <div>🐙 &nbsp;<a href="#" style="color:var(--green-dim);text-decoration:none;">github.com/brian</a></div>
+            <div>
+              🐙 &nbsp;<a
+                href="#"
+                style="color: var(--green-dim); text-decoration: none"
+                >github.com/brian</a
+              >
+            </div>
           </div>
         </div>
       </div>
