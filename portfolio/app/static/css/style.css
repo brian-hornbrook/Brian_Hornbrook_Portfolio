@@ -62,8 +62,11 @@ nav {
   font-family: var(--mono);
   font-weight: 700;
   font-size: 13px;
-  color: var(--green);
   letter-spacing: 0.08em;
+
+  a {
+      color: var(--green);
+  }
 }
 
 .nav-logo span { color: var(--text2); font-weight: 400; }
